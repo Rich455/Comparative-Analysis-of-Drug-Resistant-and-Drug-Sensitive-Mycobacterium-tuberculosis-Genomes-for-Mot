@@ -1,12 +1,14 @@
 
 
-#Load the Real TB Genome from FASTA
+!pip install biopython
 
 from Bio import SeqIO, pairwise2
 from Bio.Seq import Seq
+import matplotlib.pyplot as plt
 
-# Load genome safely
-
+# ---------------------------------------------------------
+# Load genome
+# ---------------------------------------------------------
 
 def load_genome(fasta_path):
     with open(fasta_path, "r") as f:
@@ -14,16 +16,17 @@ def load_genome(fasta_path):
             return str(record.seq).upper()
 
 
-# Extract gene using reference coordinates
-# (coordinates are valid ONLY for H37Rv)
-
+# ---------------------------------------------------------
+# Extract gene using reference coordinates (H37Rv coordinates)
+# ---------------------------------------------------------
 
 def extract_gene(genome, start, end):
     return genome[start:end]
 
 
-# Align gene sequences and detect SNPs
-
+# ---------------------------------------------------------
+# Align sequences and detect SNPs
+# ---------------------------------------------------------
 
 def find_mutations_aligned(ref_seq, query_seq, start_pos):
     alignment = pairwise2.align.globalms(
@@ -46,13 +49,12 @@ def find_mutations_aligned(ref_seq, query_seq, start_pos):
     return mutations, len(ref_seq)
 
 
+# ---------------------------------------------------------
 # Paths
+# ---------------------------------------------------------
 
-# drug sentitive is Mycobacterium tuberculosis H37Rv complete genome
-# drug resistant is Mycobacterium tuberculosis strain SCAID 320.0  
-
-DS_path = r"D:\TB_PROJECT\drug_sensitive\drug_sensitive.fasta"   # H37Rv
-DR_path = r"D:\TB_PROJECT\drug_resistant\drug_resistant.fasta"   # SCAID 320.0
+DS_path = r"D:\TB_PROJECT\drug_sensitive sequence\drug_sensitive sequence.fasta"   # H37Rv
+DR_path = r"D:\TB_PROJECT\drug_resistant sequence\drug_resistant sequence.fasta"   # SCAID 320.0
 
 DS_genome = load_genome(DS_path)
 DR_genome = load_genome(DR_path)
@@ -61,9 +63,9 @@ print("Drug-sensitive genome length:", len(DS_genome))
 print("Drug-resistant genome length:", len(DR_genome))
 
 
-
-# Resistance genes (H37Rv coords)
-
+# ---------------------------------------------------------
+# Resistance genes (H37Rv coordinates)
+# ---------------------------------------------------------
 resistance_genes = {
     "rpoB":  (759807, 763325),
     "katG":  (2153888, 2156111),
@@ -73,9 +75,12 @@ resistance_genes = {
 }
 
 
+# ---------------------------------------------------------
 # Analyze genes
-
+# ---------------------------------------------------------
 print("\n--- Mutation Analysis (Aligned) ---\n")
+
+mutation_percentages = {}
 
 for gene, (start, end) in resistance_genes.items():
     ref_seq = extract_gene(DS_genome, start, end)
@@ -84,6 +89,7 @@ for gene, (start, end) in resistance_genes.items():
     mutations, gene_length = find_mutations_aligned(ref_seq, query_seq, start)
 
     percent = (len(mutations) / gene_length) * 100
+    mutation_percentages[gene] = percent
 
     print(f"Gene: {gene}")
     print(f"Gene length: {gene_length} bp")
@@ -99,3 +105,22 @@ for gene, (start, end) in resistance_genes.items():
         print("  No mutations detected")
 
     print("-" * 40)
+
+
+# ---------------------------------------------------------
+# Visualization: Per-gene mutation density bar chart
+# --------------------------------------------------------
+
+genes = list(mutation_percentages.keys())
+values = list(mutation_percentages.values())
+
+plt.figure(figsize=(10, 6))
+plt.bar(genes, values, color="steelblue", edgecolor="black")
+
+plt.title("Mutation Density per Resistance Gene", fontsize=10)
+plt.xlabel("Gene", fontsize=7)
+plt.ylabel("Mutation Percentage (%)", fontsize=10)
+
+plt.grid(axis="y", linestyle="--", alpha=0.5)
+plt.tight_layout()
+plt.show()
