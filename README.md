@@ -146,7 +146,14 @@ High mutation frequency suggests adaptive changes in cell wall synthesis.
 - High mutation rates in other genes may indicate:
   - Structural gene variation  
   - Long-term drug pressure  
-  - Insertions/deletions affecting alignment  
+  - Insertions/deletions affecting alignment
+    
+ 
+    Image 03
+
+    ![Bar chart image](https://github.com/Rich455/Comparative-Analysis-of-Drug-Resistant-and-Drug-Sensitive-Mycobacterium-tuberculosis-Genomes-for-Mot/raw/main/Bar%20chart%20image.png)
+
+
 
 This highlights the importance of **correct gene-level alignment** in comparative genomics.
 
@@ -160,7 +167,7 @@ This highlights the importance of **correct gene-level alignment** in comparativ
   - TB drug-resistance research  
   - Bioinformatics education  
   - Clinical genomics  
-  - Genomic surveillance  
+  - Genomic surveillance and mutations studying
 
 ---
 
@@ -168,7 +175,6 @@ This highlights the importance of **correct gene-level alignment** in comparativ
 
 - Translate nucleotide mutations to amino acid changes  
 - Focus on WHO-validated resistance hotspots  
-- Add mutation density visualizations  
 - Compare multiple resistant strains  
 
 ---
