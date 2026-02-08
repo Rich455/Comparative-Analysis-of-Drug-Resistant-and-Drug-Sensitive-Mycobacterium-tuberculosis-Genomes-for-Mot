@@ -12,7 +12,7 @@
 ###  Project Overview
 
 This project compares two strains of *Mycobacterium tuberculosis* to understand the genetic basis of drug resistance.
-Source of the genomes data is National Library of the Medicine.
+Source of the genomes data is from National Library of the Medicine.
 
 - **Drug-sensitive strain:** *Mycobacterium tuberculosis* H37Rv  
 - **Drug-resistant strain:** *Mycobacterium tuberculosis* SCAID 320.0  
