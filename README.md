@@ -78,6 +78,7 @@ H37Rv is a globally used laboratory reference strain, while SCAID 320.0 is a cli
 - Gene length: 3,518 bp  
 - Mutations detected: 2  
 - Mutation percentage: **0.06%**
+- ![MTB analysis 01](MTB analysis 01.png)
 
 **Interpretation:**  
 Low mutation frequency aligns with known rifampicin resistance hotspots.
@@ -99,6 +100,7 @@ This gene is essential for isoniazid activation.
 - Gene length: 1,347 bp  
 - Mutations detected: 460  
 - Mutation percentage: **34.15%**
+- ![MTB analysis 02](MTB analysis 02.png)
 
 **Interpretation:**  
 Extensive mutations may reflect drug-target alteration mechanisms.
