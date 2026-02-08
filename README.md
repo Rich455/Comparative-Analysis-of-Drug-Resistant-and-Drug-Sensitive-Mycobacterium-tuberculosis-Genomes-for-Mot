@@ -78,6 +78,9 @@ H37Rv is a globally used laboratory reference strain, while SCAID 320.0 is a cli
 - Gene length: 3,518 bp  
 - Mutations detected: 2  
 - Mutation percentage: **0.06%**
+
+- Image 01
+- 
 - ![Alt text describing the image](https://github.com/Rich455/Comparative-Analysis-of-Drug-Resistant-and-Drug-Sensitive-Mycobacterium-tuberculosis-Genomes-for-Mot/blob/main/MTB%20analysis%2001.png)
 ---
 
@@ -120,6 +123,12 @@ Extensive mutations may reflect drug-target alteration mechanisms.
 Mutations in *gyrA* are well known to confer fluoroquinolone resistance.
 
 ---
+
+Image 02
+
+![Alt text describing the image](https://github.com/Rich455/Comparative-Analysis-of-Drug-Resistant-and-Drug-Sensitive-Mycobacterium-tuberculosis-Genomes-for-Mot/blob/main/MTB%20analysis%2002.png)
+---
+
 
 #### **embB (Ethambutol Resistance)**
 - Gene length: 3,291 bp  
