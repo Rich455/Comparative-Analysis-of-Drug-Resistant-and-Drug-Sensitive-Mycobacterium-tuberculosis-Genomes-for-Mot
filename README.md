@@ -78,7 +78,8 @@ H37Rv is a globally used laboratory reference strain, while SCAID 320.0 is a cli
 - Gene length: 3,518 bp  
 - Mutations detected: 2  
 - Mutation percentage: **0.06%**
-- ![MTB analysis 01](https://github.com/Rich455/AML-Genomic-Subtyping-with-Graphs-Causality/raw/main/MTB%20analysis%2001.png)
+
+
 
 **Interpretation:**  
 Low mutation frequency aligns with known rifampicin resistance hotspots.
