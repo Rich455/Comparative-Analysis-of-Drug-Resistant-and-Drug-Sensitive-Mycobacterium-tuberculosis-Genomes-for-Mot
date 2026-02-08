@@ -79,9 +79,9 @@ H37Rv is a globally used laboratory reference strain, while SCAID 320.0 is a cli
 - Mutations detected: 2  
 - Mutation percentage: **0.06%**
 
-- Image 01
-- 
-- ![Alt text describing the image](https://github.com/Rich455/Comparative-Analysis-of-Drug-Resistant-and-Drug-Sensitive-Mycobacterium-tuberculosis-Genomes-for-Mot/blob/main/MTB%20analysis%2001.png)
+ Image 01
+ 
+ ![Alt text describing the image](https://github.com/Rich455/Comparative-Analysis-of-Drug-Resistant-and-Drug-Sensitive-Mycobacterium-tuberculosis-Genomes-for-Mot/blob/main/MTB%20analysis%2001.png)
 ---
 
 
