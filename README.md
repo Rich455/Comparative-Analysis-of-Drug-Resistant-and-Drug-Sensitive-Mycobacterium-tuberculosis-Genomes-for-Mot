@@ -107,7 +107,7 @@ This gene is essential for isoniazid activation.
 - Gene length: 1,347 bp  
 - Mutations detected: 460  
 - Mutation percentage: **34.15%**
-- 
+  
 
 **Interpretation:**  
 Extensive mutations may reflect drug-target alteration mechanisms.
